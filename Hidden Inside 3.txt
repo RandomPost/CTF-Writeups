@@ -1,0 +1,11 @@
+1. Hint stated "Brad sought for help from his friend Allan Latham, and he received a software for it in Jan 1999"
+
+Allan Latham developed a program Jphswin back in 1999.
+
+
+2. Downloaded Jphswin and loaded the given jpeg (HIDDEN_INSIDE_3) and seeked the file without using any passphrase.
+
+3. Outputted the file as 'Hidden_File'
+
+4. Opened the file with Notepad++ and obtained the flag: yea_I_loVE_TENNis_matCHEs
+

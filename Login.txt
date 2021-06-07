@@ -1,0 +1,18 @@
+1. I connected to http://3.142.122.1:8889/. Only thing that was available was a simple login textboxes (login/password/submit button)
+
+2. I viewed the source page  and clicked on 'main.js' to inspect the code.
+
+3. From inspecting the source code I found these two codes:
+  if (user != "din_djarin11") alert("Only for user: din_djarin11"); else {
+  **indicates the username as din_djarin11**
+  
+  
+  if (s == "9ef71a8cd681a813cfd377817e9a08e5") window.location = "./" + pass; 
+  **indicates an MD5 crypto hash**
+	
+4. Decrypted 9ef71a8cd681a813cfd377817e9a08e5 with MD5:
+ir0nm4n
+
+5. I went back to http://3.142.122.1:8889/ and put din_djarin11 on username and ir0nm4n on password.
+It gave me a ir0nm4n file which included the flag: SHELL{th1s_i5_th3_wa7_845ad42f4480104b698c1e168d29b739}
+  
